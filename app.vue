@@ -5,3 +5,12 @@
   </div>
 </template>
 
+<style lang="postcss" scoped>
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+</style>
