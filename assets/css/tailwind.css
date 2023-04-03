@@ -7,3 +7,25 @@
     @apply flex flex-col justify-center items-center;
   }
 }
+
+html {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 20px;
+  }
+}
