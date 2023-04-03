@@ -2,7 +2,12 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Mukta", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      }
+    },
   },
   plugins: [],
 }
