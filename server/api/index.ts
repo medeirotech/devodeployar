@@ -16,5 +16,6 @@ export default defineEventHandler<Response>(() => {
 		emoji: message.emoji,
 		message: message.message,
 		shouldIDeploy: shouldIDeploy(day),
+		timestamp: date.toISOString(),
 	};
 });
