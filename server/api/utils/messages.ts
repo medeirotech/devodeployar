@@ -1,9 +1,9 @@
-interface Message {
+type Message = {
 	emoji: string;
 	message: string;
 }
 
-interface Messages {
+type Messages = {
 	[key: string]: Message[];
 }
 
