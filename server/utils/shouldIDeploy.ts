@@ -1,0 +1,1 @@
+export const shouldIDeploy = (day: number) => day > 0 && day < 5;
