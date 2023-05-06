@@ -1,11 +1,11 @@
-type Message = {
+export type Message = {
 	emoji: string;
 	message: string;
-}
+};
 
 type Messages = {
 	[key: string]: Message[];
-}
+};
 
 const messages: Messages = {
 	monday: [
@@ -49,13 +49,33 @@ const messages: Messages = {
 		{ emoji: "🧾", message: "Testou tudo ou só quer bater ponto?" },
 	],
 
-	friday: [
+	weekend: [
 		{ emoji: "❌", message: "Não." },
 		{ emoji: "🍺", message: "E a breja?" },
 		{ emoji: "🗓️", message: "Codar no fim de semana?" },
 		{ emoji: "🚀🛑", message: "Esse foguete tem ré" },
 		{ emoji: "🚧", message: "Deixa isso aí pra segunda-feira" },
 		{ emoji: "🍺", message: "Codar bêbado não vai dar certo" },
+		{ emoji: "😵‍💫", message: "Você é louco?" },
+	],
+
+	friday: [
+		{ emoji: "📅", message: "Sextou!" },
+		{ emoji: "⌛️", message: "Tarde demais" },
+		{ emoji: "🚧", message: "Deixa isso aí pra segunda-feira" },
+		{ emoji: "⌛️", message: "Justo no último dia útil?" },
+	],
+
+	saturday: [
+		{ emoji: "🏖️", message: "Vai pra praia e esquece isso" },
+		{ emoji: "📅", message: "Sabadou!" },
+	],
+
+	sunday: [
+		{ emoji: "🗓️", message: "Deixa pra amanhã" },
+		{ emoji: "🥩", message: "Vai assar uma carne, vai" },
+		{ emoji: "📅", message: "Domingou!" },
+		{ emoji: "⏳️", message: "Só mais um dia" },
 	],
 
 	easter: [
@@ -72,5 +92,9 @@ const messages: Messages = {
 		{ emoji: "🍲", message: "E o almoço de família?" },
 	],
 };
+
+messages.friday = [...messages.friday, ...messages.weekend];
+messages.saturday = [...messages.saturday, ...messages.weekend];
+messages.sunday = [...messages.sunday, ...messages.weekend];
 
 export default messages;
