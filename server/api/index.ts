@@ -4,6 +4,7 @@ type Response = {
 	emoji: string;
 	message: string;
 	shouldIDeploy: boolean;
+	timestamp: string;
 }
 
 export default defineEventHandler<Response>(() => {
