@@ -1,13 +1,13 @@
-export type Message = {
+export type MessageType = {
 	emoji: string;
 	message: string;
 };
 
-type Messages = {
-	[key: string]: Message[];
+export type Messages = {
+	[key: string]: MessageType[];
 };
 
-const messages: Messages = {
+export const messages: Messages = {
 	monday: [
 		{
 			emoji: "⌚️",
@@ -96,5 +96,3 @@ const messages: Messages = {
 messages.friday = [...messages.friday, ...messages.weekend];
 messages.saturday = [...messages.saturday, ...messages.weekend];
 messages.sunday = [...messages.sunday, ...messages.weekend];
-
-export default messages;
