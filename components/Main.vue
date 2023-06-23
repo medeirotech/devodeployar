@@ -1,12 +1,29 @@
+
 <template>
 	<main>
 		<h1>Devo deployar hoje?</h1>
-		<Message />
-		<span>Aperte <kbd>Espaço</kbd> ou clique aqui</span>
+		<Message :message="message"/>
+		<span @click="getMessage">Aperte <kbd>Espaço</kbd> ou clique aqui</span>
 	</main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { MessageType } from "~~/server/utils/messages";
+
+const emit = defineEmits(['message']);
+const message = ref<MessageType>();
+const getMessage = async () => {
+	try {
+		const data = await $fetch('/api');
+		message.value = data;
+		emit("message");
+	} catch (error) {
+		throw new Error("Não foi possível obter a mensagem");
+	}
+}
+
+onBeforeMount(getMessage);
+</script>
 
 <style lang="postcss" scoped>
 main {
