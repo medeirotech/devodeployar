@@ -3,10 +3,10 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="https://github.com/medeirotech/devodeployar">GitHub</a>
+					<a href="https://github.com/medeirotech/devodeployar" target="_blank" rel="noopener noreferrer">GitHub</a>
 				</li>
 				<li>
-					<a href="https://discord.gg/k6hFV5HxMv">Entre na medeiro.tech!</a>
+					<a href="https://discord.gg/k6hFV5HxMv" target="_blank" rel="noopener noreferrer">Entre na medeiro.tech!</a>
 				</li>
 			</ul>
 		</nav>
