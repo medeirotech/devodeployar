@@ -6,12 +6,7 @@
 </template>
 
 <style lang="postcss">
-body,
-#__nuxt {
-	@apply bg-red-700 min-h-screen font-sans;
-
-	.wrapper {
-		@apply grid place-items-center grid-rows-[1fr_auto] min-h-screen text-center max-w-5xl mx-auto;
-	}
+.wrapper {
+	@apply font-sans grid place-items-center grid-rows-[1fr_auto] min-h-screen text-center mx-auto;
 }
 </style>
