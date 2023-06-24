@@ -7,17 +7,32 @@
 
 <script setup lang="ts">
 import { shouldIDeploy } from './server/utils/shouldIDeploy';
-const day = new Date().getDay();
 
 const getOpenGraphImage = (shouldDeploy: boolean) =>
 	'https://devodeployar.dev' + (shouldDeploy ? '/yes.png' : '/no.png');
 
+const day = new Date().getDay();
+const title = '🚀 Devo deployar hoje?'; 
+const description = '🔥 Seu amigo nessa decisão difícil';
+const siteName = 'https://devodeployar.dev'
+const image = getOpenGraphImage(shouldIDeploy(day));
+
 useServerSeoMeta({
-  title: '🚀 Devo deployar hoje?',
-	ogTitle: '🚀 Devo deployar hoje?',
-	description: '🔥 Seu amigo nessa decisão difícil',
-	ogDescription:  '🔥 Seu amigo nessa decisão difícil',
-	ogImage: getOpenGraphImage(shouldIDeploy(day))
+  title,
+	ogTitle: title,
+	twitterTitle: title,
+
+	ogSiteName: siteName,
+	twitterSite: siteName,
+
+	description,
+	ogDescription: description,
+	twitterDescription: description,
+
+	ogImage: image,
+	twitterImage: image,
+	
+	twitterCard: 'summary_large_image'
 })
 
 type BackgroundColor = "bg-shouldDeploy" | "bg-shouldNotDeploy";
