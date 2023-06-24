@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .flex-column {
-    @apply flex flex-col justify-center items-center;
-  }
-}
-
 html {
   font-size: 12px;
 }
