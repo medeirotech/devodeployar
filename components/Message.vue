@@ -1,11 +1,22 @@
 <template>
 	<section>
-		<h3>🍺</h3>
-		<h2>CODAR BÊBADO NÃO VAI DAR CERTO</h2>
+		<h3>{{ message?.emoji }}</h3>
+		<h2 :class="[isDeployDay() ? '' : 'uppercase']">{{ message?.message }}</h2>
 	</section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { MessageType } from "~~/server/utils/messages";
+
+defineProps({
+	message: Object as PropType<MessageType>,
+});
+
+const isDeployDay = () => {
+	const day = new Date().getDay();
+	return day > 0 && day < 5;
+};
+</script>
 
 <style lang="postcss" scoped>
 section {
@@ -15,7 +26,7 @@ section {
 	}
 
 	h2 {
-		@apply text-7xl font-bold;
+		@apply text-7xl font-bold max-w-5xl;
 	}
 }
 </style>

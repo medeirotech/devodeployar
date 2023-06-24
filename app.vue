@@ -1,17 +1,24 @@
 <template>
-	<div class="wrapper">
-		<Main />
+	<div class="wrapper" :class="bgColor">
+		<Main @message="updateBgColor" />
 		<Footer />
 	</div>
 </template>
 
-<style lang="postcss">
-body,
-#__nuxt {
-	@apply bg-red-700 min-h-screen font-sans;
+<script setup lang="ts">
+type BackgroundColor = "bg-shouldDeploy" | "bg-shouldNotDeploy";
+const bgColor = ref<BackgroundColor>("bg-shouldDeploy");
 
-	.wrapper {
-		@apply grid place-items-center grid-rows-[1fr_auto] min-h-screen text-center max-w-5xl mx-auto;
-	}
+const updateBgColor = () => {
+	const day = new Date().getDay();
+	bgColor.value = (day > 0 && day < 5) ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
+};
+
+updateBgColor();
+</script>
+
+<style lang="postcss">
+.wrapper {
+	@apply font-sans grid place-items-center grid-rows-[1fr_auto] min-h-screen text-center mx-auto;
 }
 </style>
