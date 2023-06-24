@@ -10,7 +10,7 @@ import { shouldIDeploy } from './server/utils/shouldIDeploy';
 const day = new Date().getDay();
 
 const getOpenGraphImage = (shouldDeploy: boolean) =>
-	shouldDeploy ? '/yes.png' : '/no.png';
+	'https://devodeployar.dev' + (shouldDeploy ? '/yes.png' : '/no.png');
 
 useServerSeoMeta({
   title: '🚀 Devo deployar hoje?',
