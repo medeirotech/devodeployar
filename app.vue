@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { shouldIDeploy } from 'server/utils/shouldIDeploy';
+import { shouldIDeploy } from './server/utils/shouldIDeploy';
 const day = new Date().getDay();
 
 const getOpenGraphImage = (shouldDeploy: boolean) =>
