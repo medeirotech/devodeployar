@@ -15,7 +15,8 @@ const day = new Date().getDay();
 const title = '🚀 Devo deployar hoje?'; 
 const description = '🔥 Seu amigo nessa decisão difícil';
 const siteName = 'https://devodeployar.dev'
-const image = getOpenGraphImage(shouldIDeploy(day));
+const shouldDeploy = shouldIDeploy(day)
+const image = getOpenGraphImage(shouldDeploy);
 
 useServerSeoMeta({
   title,
@@ -38,11 +39,11 @@ useServerSeoMeta({
 type BackgroundColor = "bg-shouldDeploy" | "bg-shouldNotDeploy";
 const bgColor = ref<BackgroundColor>("bg-shouldDeploy");
 
-const updateBgColor = (day: number) => {
-	bgColor.value = (day > 0 && day < 5) ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
+const updateBgColor = (shouldDeploy: boolean) => {
+	bgColor.value = shouldDeploy ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
 };
 
-updateBgColor(day);
+updateBgColor(shouldDeploy);
 </script>
 
 <style lang="postcss">
