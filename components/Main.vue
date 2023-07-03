@@ -10,13 +10,11 @@
 import { useKeypress } from "vue3-keypress";
 import { MessageType } from "~~/server/utils/messages";
 
-const emit = defineEmits(["message"]);
 const message = ref<MessageType>();
 const getMessage = async () => {
 	try {
 		const data = await $fetch("/api");
 		message.value = data;
-		emit("message");
 	} catch (error) {
 		throw new Error("Não foi possível obter a mensagem");
 	}

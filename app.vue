@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper" :class="bgColor">
-		<Main @message="updateBgColor" />
+		<Main />
 		<Footer />
 	</div>
 </template>
@@ -16,6 +16,7 @@ const title = '🚀 Devo deployar hoje?';
 const description = '🔥 Seu amigo nessa decisão difícil';
 const siteName = 'https://devodeployar.dev'
 const shouldDeploy = shouldIDeploy(day)
+
 const image = getOpenGraphImage(shouldDeploy);
 
 useServerSeoMeta({
@@ -37,13 +38,7 @@ useServerSeoMeta({
 })
 
 type BackgroundColor = "bg-shouldDeploy" | "bg-shouldNotDeploy";
-const bgColor = ref<BackgroundColor>("bg-shouldDeploy");
-
-const updateBgColor = (shouldDeploy: boolean) => {
-	bgColor.value = shouldDeploy ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
-};
-
-updateBgColor(shouldDeploy);
+const bgColor: BackgroundColor = shouldDeploy ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
 </script>
 
 <style lang="postcss">
