@@ -9,10 +9,6 @@ module.exports = {
         sans: ["Mukta", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
-      colors: {
-        shouldDeploy: "#00A32E",
-        shouldNotDeploy: "#E72525"
-      }
     },
   },
   plugins: [
@@ -23,7 +19,13 @@ module.exports = {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center'
-        }
+        },
+        '.should-deploy-bg': {
+          background: 'linear-gradient(180deg, rgba(0,205,58,1) 0%, rgba(0,163,46,1) 100%)',
+        },
+        '.should-not-deploy-bg': {
+          background: 'linear-gradient(180deg, rgba(255,60,60,1) 0%, rgba(231,37,37,1) 100%)',
+        },
       })
     })
   ],

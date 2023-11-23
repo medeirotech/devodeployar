@@ -37,8 +37,8 @@ useServerSeoMeta({
 	twitterCard: 'summary_large_image'
 })
 
-type BackgroundColor = "bg-shouldDeploy" | "bg-shouldNotDeploy";
-const bgColor: BackgroundColor = shouldDeploy ? "bg-shouldDeploy" : "bg-shouldNotDeploy";
+type BackgroundColor = "should-deploy-bg" | "should-not-deploy-bg";
+const bgColor: BackgroundColor = shouldDeploy ? "should-deploy-bg" : "should-not-deploy-bg";
 </script>
 
 <style lang="postcss">
