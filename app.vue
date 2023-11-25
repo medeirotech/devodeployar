@@ -6,21 +6,20 @@
 </template>
 
 <script setup lang="ts">
-import { shouldIDeploy } from './server/utils/shouldIDeploy';
+import { shouldIDeploy } from "./server/utils/shouldIDeploy";
 
 const getOpenGraphImage = (shouldDeploy: boolean) =>
-	'https://devodeployar.dev' + (shouldDeploy ? '/yes.png' : '/no.png');
+	"https://devodeployar.dev" + (shouldDeploy ? "/yes.png" : "/no.png");
 
 const day = new Date().getDay();
-const title = '🚀 Devo deployar hoje?'; 
-const description = '🔥 Seu amigo nessa decisão difícil';
-const siteName = 'https://devodeployar.dev'
-const shouldDeploy = shouldIDeploy(day)
-
+const title = "🚀 Devo deployar hoje?";
+const description = "🔥 Seu amigo nessa decisão difícil";
+const siteName = "https://devodeployar.dev";
+const shouldDeploy = shouldIDeploy(day);
 const image = getOpenGraphImage(shouldDeploy);
 
 useServerSeoMeta({
-  title,
+	title,
 	ogTitle: title,
 	twitterTitle: title,
 
@@ -33,12 +32,14 @@ useServerSeoMeta({
 
 	ogImage: image,
 	twitterImage: image,
-	
-	twitterCard: 'summary_large_image'
-})
+
+	twitterCard: "summary_large_image",
+});
 
 type BackgroundColor = "should-deploy-bg" | "should-not-deploy-bg";
-const bgColor: BackgroundColor = shouldDeploy ? "should-deploy-bg" : "should-not-deploy-bg";
+const bgColor: BackgroundColor = shouldDeploy
+	? "should-deploy-bg"
+	: "should-not-deploy-bg";
 </script>
 
 <style lang="postcss">
