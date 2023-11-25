@@ -36,6 +36,15 @@ useServerSeoMeta({
 	twitterCard: "summary_large_image",
 });
 
+useHead({
+	link: [
+		{
+			rel: "icon",
+			type: "image/x-icon",
+			href: shouldDeploy ? "/yes.ico" : "/no.ico",
+		},
+	],
+});
 type BackgroundColor = "should-deploy-bg" | "should-not-deploy-bg";
 const bgColor: BackgroundColor = shouldDeploy
 	? "should-deploy-bg"
