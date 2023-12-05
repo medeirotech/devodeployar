@@ -3,7 +3,7 @@ export type MessageType = {
 	message: string;
 };
 
-export type Messages = {
+type Messages = {
 	[key: string]: MessageType[];
 };
 

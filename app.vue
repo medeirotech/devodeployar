@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { shouldIDeploy } from "./server/utils/shouldIDeploy";
+import shouldIDeploy from "./server/utils/shouldIDeploy";
 
 const getOpenGraphImage = (shouldDeploy: boolean) =>
 	"https://devodeployar.dev" + (shouldDeploy ? "/yes.png" : "/no.png");

@@ -1,4 +1,4 @@
-import { MessageType } from "../utils/messages";
+import { MessageType, messages } from "@/data/messages";
 
 type Response = {
 	emoji: string;
