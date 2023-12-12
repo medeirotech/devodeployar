@@ -1,7 +1,7 @@
 export const isChristmas = (date: Date) => {
 	if (
 		date.getMonth() === 11 &&
-		(date.getDate() === 12 || date.getDate() === 25)
+		(date.getDate() === 24 || date.getDate() === 25)
 	)
 		return "christmas";
 };
