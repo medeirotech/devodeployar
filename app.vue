@@ -11,11 +11,11 @@ import shouldIDeploy from "./server/utils/shouldIDeploy";
 const getOpenGraphImage = (shouldDeploy: boolean) =>
 	"https://devodeployar.dev" + (shouldDeploy ? "/yes.png" : "/no.png");
 
-const day = new Date().getDay();
+const date = new Date();
 const title = "🚀 Devo deployar hoje?";
 const description = "🔥 Seu amigo nessa decisão difícil";
 const siteName = "https://devodeployar.dev";
-const shouldDeploy = shouldIDeploy(day);
+const shouldDeploy = shouldIDeploy(date);
 const image = getOpenGraphImage(shouldDeploy);
 
 useServerSeoMeta({
