@@ -1,10 +1,10 @@
-export type MessageType = {
+export type Message = {
 	emoji: string;
 	message: string;
 };
 
 type Messages = {
-	[key: string]: MessageType[];
+	[key: string]: Message[];
 };
 
 export const messages: Messages = {
@@ -112,3 +112,20 @@ messages.thursday = [...messages.thursday, ...messages.deployDays];
 messages.friday = [...messages.friday, ...messages.weekend];
 messages.saturday = [...messages.saturday, ...messages.weekend];
 messages.sunday = [...messages.sunday, ...messages.weekend];
+
+export const holidayMessages: Messages = {
+	christmas: [
+		{ emoji: "🎅", message: "Em pleno Natal?" },
+		{ emoji: "🎁", message: "Seu presente é a demissão" },
+		{ emoji: "😋", message: "É pavê ou padeployar?" },
+		{ emoji: "🎄", message: "Não vai ser nada feliz se você fizer isso" },
+		{ emoji: "🛌", message: "Já ficou o ano inteiro derrubando o servidor, dá um tempo" },
+	],
+	newYear: [
+		{ emoji: "🎆", message: "Vai passar a virada codando?" },
+		{ emoji: "👾", message: "Ano novo, bugs velhos" },
+		{ emoji: "🍾", message: "E o champanhe?" },
+		{ emoji: "🎇", message: "Um ano repleto de bugs pra você" },
+		{ emoji: "❌", message: "Não comece fazendo cagada" },
+	],
+};
