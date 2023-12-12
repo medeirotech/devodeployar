@@ -2,7 +2,7 @@ import { getHoliday } from "@/features/holidays/getHoliday";
 
 const shouldIDeploy = (date: Date) => {
 	const day = date.getDay();
-	return (day > 0 && day < 5) || !getHoliday(date).isHoliday;
+	return !getHoliday(date).isHoliday ?? (day > 0 && day < 5);
 };
 
 export default shouldIDeploy;
