@@ -1,3 +1,6 @@
-import { MessageType } from "./messages";
+import { Message } from "@/data/messages";
 
-export const getRandomMessage = (messages: MessageType[]) =>  messages[Math.floor(Math.random() * messages.length)];
+const getRandomMessage = (messages: Message[]) =>
+	messages[Math.floor(Math.random() * messages.length)];
+
+export default getRandomMessage;
