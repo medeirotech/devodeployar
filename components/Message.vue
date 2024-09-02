@@ -6,10 +6,10 @@
 </template>
 
 <script setup lang="ts">
-import { MessageType } from "~~/server/utils/messages";
+import type { Message } from "@/data/messages";
 
 defineProps({
-	message: Object as PropType<MessageType>,
+	message: Object as PropType<Message>,
 });
 
 const isDeployDay = () => {
