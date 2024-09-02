@@ -1,21 +1,17 @@
 <template>
 	<section>
 		<h3>{{ message?.emoji }}</h3>
-		<h2 :class="[isDeployDay() ? '' : 'uppercase']">{{ message?.message }}</h2>
+		<h2 :class="[shouldIDeploy() ? '' : 'uppercase']">{{ message?.message }}</h2>
 	</section>
 </template>
 
 <script setup lang="ts">
 import type { Message } from "@/data/messages";
+import shouldIDeploy from "@/server/utils/shouldIDeploy";
 
 defineProps({
 	message: Object as PropType<Message>,
 });
-
-const isDeployDay = () => {
-	const day = new Date().getDay();
-	return day > 0 && day < 5;
-};
 </script>
 
 <style lang="postcss" scoped>
