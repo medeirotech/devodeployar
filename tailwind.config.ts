@@ -9,6 +9,9 @@ module.exports = {
 				sans: ["Mukta", "sans-serif"],
 				mono: ["JetBrains Mono", "monospace"],
 			},
+			screens: {
+				xs: '400px',
+			}
 		},
 	},
 	plugins: [

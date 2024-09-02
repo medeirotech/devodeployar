@@ -18,11 +18,12 @@ defineProps({
 section {
 	@apply flex-column gap-5;
 	h3 {
-		@apply text-8xl;
+		@apply text-6xl xs:text-8xl;
 	}
 
 	h2 {
-		@apply text-7xl font-bold max-w-5xl;
+		@apply text-5xl xs:text-7xl font-bold max-w-5xl;
+		text-wrap: balance;
 	}
 }
 </style>
