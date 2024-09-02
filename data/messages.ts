@@ -114,12 +114,22 @@ messages.saturday = [...messages.saturday, ...messages.weekend];
 messages.sunday = [...messages.sunday, ...messages.weekend];
 
 export const holidayMessages: Messages = {
+	independenceDay: [
+		{ emoji: "🇧🇷", message: "Independência ou deploy!" },
+		{ emoji: "👾", message: "Torne-se independente dos bugs" },
+		{ emoji: "🇧🇷", message: "Brasil sil sil sil" },
+		{ emoji: "💸", message: "Você ainda não é independente do seu emprego" },
+		{ emoji: "❌", message: "Não. Descanse." },
+	],
 	christmas: [
 		{ emoji: "🎅", message: "Em pleno Natal?" },
 		{ emoji: "🎁", message: "Seu presente é a demissão" },
 		{ emoji: "😋", message: "É pavê ou padeployar?" },
 		{ emoji: "🎄", message: "Não vai ser nada feliz se você fizer isso" },
-		{ emoji: "🛌", message: "Já ficou o ano inteiro derrubando o servidor, dá um tempo" },
+		{
+			emoji: "🛌",
+			message: "Já ficou o ano inteiro derrubando o servidor, dá um tempo",
+		},
 	],
 	newYear: [
 		{ emoji: "🎆", message: "Vai passar a virada codando?" },
