@@ -18,7 +18,7 @@
 						href="https://discord.gg/k6hFV5HxMv"
 						target="_blank"
 						rel="noopener noreferrer"
-						>Entre na medeiro.tech!</a
+						>Entre na Coitados Tech!</a
 					>
 				</li>
 			</ul>

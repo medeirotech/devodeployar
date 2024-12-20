@@ -1,3 +1,7 @@
+export const isIndependenceDay = (date: Date) => {
+	if (date.getMonth() === 8 && date.getDate() === 7) return "independenceDay";
+}
+
 export const isChristmas = (date: Date) => {
 	if (
 		date.getMonth() === 11 &&
@@ -13,3 +17,4 @@ export const isNewYear = (date: Date) => {
 	)
 		return "newYear";
 };
+
