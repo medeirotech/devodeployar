@@ -8,6 +8,9 @@ export default defineNuxtConfig({
 			charset: "utf-8",
 			viewport: "width=device-width, initial-scale=1",
 			title: "🚀 Devo deployar hoje?",
+			meta: [
+        { name: "description", content: "🔥 Seu amigo nessa decisão difícil." },
+      ],
 			link: [
 				{ rel: "preconnect", href: "https://fonts.google.com" },
 				{
