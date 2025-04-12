@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 import { useKeypress } from "vue3-keypress";
-import { MessageType } from "~~/server/utils/messages";
+import { type Message } from "@/data/messages";
 
-const message = ref<MessageType>();
+const message = ref<Message>();
 const getMessage = async () => {
 	try {
 		const data = await $fetch("/api");

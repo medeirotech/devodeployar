@@ -1,4 +1,4 @@
-import { Message, messages, holidayMessages } from "@/data/messages";
+import { type Message, messages, holidayMessages } from "@/data/messages";
 import { getHoliday } from "@/features/holidays/getHoliday";
 
 type Response = {
