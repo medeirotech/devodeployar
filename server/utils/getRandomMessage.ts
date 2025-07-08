@@ -1,4 +1,4 @@
-import { Message } from "@/data/messages";
+import { type Message } from "@/data/messages";
 
 const getRandomMessage = (messages: Message[]) =>
 	messages[Math.floor(Math.random() * messages.length)];

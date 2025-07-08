@@ -15,7 +15,7 @@
 				</li>
 				<li>
 					<a
-						href="https://discord.gg/k6hFV5HxMv"
+						href="https://discord.gg/6rpEsF7SCc"
 						target="_blank"
 						rel="noopener noreferrer"
 						>Entre na Coitados Tech!</a
