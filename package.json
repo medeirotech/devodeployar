@@ -9,9 +9,9 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxtjs/tailwindcss": "^6.8.0",
-		"@types/node": "^18.15.11",
-		"nuxt": "^3.3.2"
+		"@nuxtjs/tailwindcss": "^6.14.0",
+		"@types/node": "^25.3.0",
+		"nuxt": "^4.3.1"
 	},
 	"dependencies": {
 		"vue3-keypress": "^4.0.1"
