@@ -1,5 +1,6 @@
 import { type Message, messages, holidayMessages } from "@/data/messages";
 import { getHoliday } from "@/features/holidays/getHoliday";
+import getBrazilDate from "@/server/utils/getBrazilDate";
 
 type Response = {
 	emoji: string;
@@ -9,8 +10,7 @@ type Response = {
 };
 
 export default defineEventHandler<Response>(() => {
-	const timezoneOffset: number = 180 * 60 * 1000;
-	const date: Date = new Date(Date.now() - timezoneOffset);
+	const date: Date = getBrazilDate();
 	const day: number = date.getDay();
 	const { isHoliday, holiday } = getHoliday(date);
 	const message: Message = getRandomMessage(

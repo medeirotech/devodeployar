@@ -1,8 +1,7 @@
 import { getHoliday } from "@/features/holidays/getHoliday";
+import getBrazilDate from "./getBrazilDate";
 
-const timezoneOffset: number = 180 * 60 * 1000;
-
-const shouldIDeploy = (date: Date = new Date(Date.now() - timezoneOffset)) => {
+const shouldIDeploy = (date: Date = getBrazilDate()) => {
 	const day = date.getDay();
 	const isWeekend = !(day > 0 && day < 5);
 	const { isHoliday } = getHoliday(date);
